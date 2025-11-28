@@ -1,11 +1,15 @@
 const id = "1dIL3JjvLz9QGQPUxDUlIIZmjR2kRAXtgMel7Fyil-j4";
 const range = "Classics!A1:O179";
 const key = "AIzaSyCBmzuL3Z3NORg7j5Jtfq791Y8Hf7Yq0DU";
-
-const thumbHeight = 30 * 9;
-const thumbWidth = 30 * 16;
-
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${encodeURIComponent(range)}?key=${key}`;
+
+// I WANT TO ADD LIKE A TIME MACHINE AND uh SORTING BY THINGS later
+
+//tweaky
+const size = 20;
+const thumbHeight = size * 9;
+const thumbWidth = size * 16;
+console.log(`${thumbWidth}x${thumbHeight}`);
 
 fetch(url)
   .then((r) => r.json())
@@ -41,6 +45,7 @@ fetch(url)
         div.style.setProperty("--bg-url", `url("novideo.png")`);
       }
 
+      //hell on earth
       div.innerHTML += `
       <div class="details">
         <div class="upperDetails">
